@@ -88,14 +88,14 @@ html {
   --h6-color: #ffaa00;
   --primary-text-color: #222;
   --holding-page-title-color: #ebedf0;
-  --accent-color: #5200ff;
-  --overlay-color: #5200ff;
+  --accent-color: #000000;
+  --overlay-color: #000000;
   --overlay-title-color: #ffffff;
   --overlay-description-color: #ffffff;
   --hyperlink-color: #000000;
   --hyperlink-alternate-color: orangered;
-  --hover-color: #111;
-  --visited-color: #5200ff;
+  --hover-color: #000000;
+  --visited-color: #000000;
   --project-title-color: #000000;
   --project-sidebar-background-color: transparent;
   --project-sidebar-text-color: #42392c;
@@ -322,7 +322,7 @@ a:active {
 }
 
 .logo {
-  width: 3rem;
+  width: 5rem;
 }
 
 .wordmark {
@@ -839,7 +839,7 @@ a.sub-navigation-link:hover {
   }
 
   .logo {
-    width: 5rem;
+    width: 3rem;
   }
 
   .hero {
