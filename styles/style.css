@@ -322,17 +322,17 @@ a:active {
 }
 
 .logo {
-  width: 5rem;
+  width: 2.5rem;
 }
 
 .wordmark {
-  fill: white;
+  fill: #42392c;
   transition: 200ms;
   transition-timing-function: ease-in-out;
 }
 
 .wordmark:hover {
-  fill: black;
+  fill: #a00e06;
 }
 
 .hero-headline-wrapper {
@@ -372,6 +372,97 @@ a:active {
  ███ ███   ██████  ██   ██ ██   ██     ██      ██   ██  ██████  ███████ 
 
 */
+
+.welcome-footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  padding-right: calc(1.5em - 10px);
+  margin-bottom: 1em;
+
+  li {
+    margin: 0 10px;
+  }
+}
+
+.logo {
+  width: 2rem !important;
+}
+
+.welcome-branding-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 13vh;
+}
+
+.wordmark .cls-1-top {
+  transition: transform-origin 0.4s ease-in-out, transform 0.4s ease-in-out !important;
+  transform-style: preserve-3d;
+}
+
+.wordmark .cls-1-bottom {
+  transition: transform-origin 0.5s ease-in-out, transform 0.5s ease-in-out !important;
+  transform-style: preserve-3d;
+}
+
+.wordmark:hover > .cls-1-top {
+  transform: rotateY(180deg);
+  transform-origin: 36px 36px;
+}
+
+.wordmark:hover > .cls-1-bottom {
+  transform: rotateY(-180deg);
+  transform-origin: 36px 36px;
+}
+
+.hero-box {
+  width: 40vh;
+  height: 40vh;
+  background-color: #000000;
+  overflow: hidden;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+
+  .line {
+    display: inline-block;
+    width: fit-content;
+  }
+}
+
+.hero-headline-description {
+  width: 40vh;
+  font-size: 19px;
+  text-align: left;
+  margin-top: 25px;
+  line-height: 26px;
+
+  span {
+    font-size: 25px;
+    font-weight: bold;
+  }
+}
+
+@keyframes left-sliding-text {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes right-sliding-text {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
 
 .work-wrapper {
   flex: 1;
