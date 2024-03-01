@@ -283,33 +283,45 @@
 
       window.addEventListener("scroll", myScrollFunc);
 
-      [1, 2, 3];
-
+      // Generate array with the 4 repetitions of the Greetings String
       const textArray = new Array(4).fill("Hello, my name is Sofiia Kozenko"),
+        // amount of rows inside black box
         rowNum = 25;
 
+      // Select black box element to work with
       let element = document.querySelector(".hero-box");
+      // Generate random line number from 3 to 7 to apply accent color
       const randomColoredLineNumber = Math.floor(Math.random() * 7) + 3;
 
+      // loop to generate greetings text lines
       for (i = 0; i < rowNum; i++) {
+        // Generate random animation duration for each line of text
         const animationDuration = Math.floor(Math.random() * 30) + 5;
+        // Calculate animation direction for odd and even indexes (row numbers)
         const direction = i % 2 === 0 ? "left" : "right";
+        // Calculate random text size from 10 to 30
         const randomTextSize = Math.floor(Math.random() * 30) + 10;
+        // Prepare text color for each line / highlight colored one with accent
         const randomColoredLine = `color: ${
           i === randomColoredLineNumber ? "#0536D7" : "white"
         };`;
 
+        // Create parent div to inject with text lines
         var newElement = document.createElement("div");
+        // Generate unique id for each line for better indexing
         newElement.id = `${i}_line`;
         newElement.className = "line";
+        // Apply animation config
         newElement.style.cssText = `animation: ${direction}-sliding-text ${animationDuration}s linear infinite;`;
 
+        // Create 2 identical inline strings for smooth infinite scrollong animation with delay of half duration for the second one
         newElement.innerHTML = `<span style="font-size: ${randomTextSize}px; ${randomColoredLine}">${textArray.join(
           " "
         )}</span> <span style="font-size: ${randomTextSize}px; animation-delay: ${
           animationDuration / 2
         }s; ${randomColoredLine}">${textArray.join(" ")}</span>`;
 
+        // Inject black box with the line
         element.appendChild(newElement);
       }
     </script>
