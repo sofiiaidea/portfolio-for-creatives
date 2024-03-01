@@ -92,7 +92,7 @@ html {
   --overlay-color: #42392c;
   --overlay-title-color: #c8c2b0;
   --overlay-description-color: #c8c2b0;
-  --hyperlink-color: #0536d7;
+  --hyperlink-color: #42392c;
   --hyperlink-alternate-color: orangered;
   --hover-color: darkred;
   --visited-color: #42392c;
@@ -326,7 +326,7 @@ a:active {
 }
 
 .wordmark {
-  fill: #42392c;
+  fill: #0536d7;
   transition: 200ms;
   transition-timing-function: ease-in-out;
 }
